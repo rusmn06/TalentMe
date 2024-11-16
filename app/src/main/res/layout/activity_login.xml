@@ -9,7 +9,7 @@
 
     <View
         android:id="@+id/view"
-        android:layout_width="405dp"
+        android:layout_width="0dp"
         android:layout_height="443dp"
         android:background="@drawable/rounded_corner"
         android:backgroundTint="@color/black"
