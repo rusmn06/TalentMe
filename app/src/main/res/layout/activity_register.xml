@@ -10,23 +10,14 @@
 
     <View
         android:id="@+id/view"
-        android:layout_width="0dp"
-        android:layout_height="582dp"
+        android:layout_width="412dp"
+        android:layout_height="714dp"
         android:background="@drawable/rounded_corner"
         android:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="251dp"
-        android:layout_height="142dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_1" />
 
     <TextView
         android:id="@+id/textView5"
@@ -88,7 +79,7 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/poppinsextrabold"
         android:text="Email"
         android:textColor="#257063"
@@ -112,8 +103,8 @@
 
     <EditText
         android:id="@+id/editTextText"
-        android:layout_width="353dp"
-        android:layout_height="43dp"
+        android:layout_width="349dp"
+        android:layout_height="54dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/edit_text_border"
         android:ems="10"
@@ -130,7 +121,7 @@
     <EditText
         android:id="@+id/editTextText2"
         android:layout_width="349dp"
-        android:layout_height="wrap_content"
+        android:layout_height="51dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/edit_text_border"
         android:ems="10"
@@ -146,8 +137,8 @@
 
     <EditText
         android:id="@+id/editTextText3"
-        android:layout_width="349dp"
-        android:layout_height="wrap_content"
+        android:layout_width="357dp"
+        android:layout_height="55dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/edit_text_border"
         android:ems="10"
@@ -162,8 +153,8 @@
 
     <EditText
         android:id="@+id/editTextText7"
-        android:layout_width="349dp"
-        android:layout_height="wrap_content"
+        android:layout_width="358dp"
+        android:layout_height="49dp"
         android:layout_marginEnd="28dp"
         android:background="@drawable/edit_text_border"
         android:ems="10"
@@ -179,7 +170,7 @@
     <EditText
         android:id="@+id/editTextText5"
         android:layout_width="349dp"
-        android:layout_height="wrap_content"
+        android:layout_height="52dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/edit_text_border"
         android:ems="10"
@@ -209,19 +200,20 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="111dp"
-        android:layout_height="38dp"
-        android:layout_marginEnd="32dp"
+        android:layout_width="168dp"
+        android:layout_height="56dp"
         android:backgroundTint="#000000"
         android:fontFamily="@font/poppinsextrabold"
         android:text="Sign In"
 
+        android:textAlignment="viewStart"
         android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold|italic"
         app:cornerRadius="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/button2"
         app:layout_constraintVertical_bias="0.0" />
@@ -230,7 +222,7 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
+        android:layout_marginStart="36dp"
         android:layout_marginTop="9dp"
         android:fontFamily="@font/poppinsextrabold"
         android:text="Already have an account?"
@@ -238,6 +230,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.123" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
