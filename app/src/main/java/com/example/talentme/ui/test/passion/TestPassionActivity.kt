@@ -1,4 +1,4 @@
-package com.example.talentme
+package com.example.talentme.ui.test.passion
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -7,10 +7,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.talentme.R
 import com.example.talentme.form.Question
 import com.example.talentme.form.QuestionAdapter
 
-class TestTalentActivity : AppCompatActivity() {
+class TestPassionActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var questionAdapter: QuestionAdapter
     private lateinit var questionList: List<Question>

@@ -16,22 +16,22 @@
             android:name=".ProfilePageActivity"
             android:exported="false" />
         <activity
-            android:name=".ResultPersonalityActivity"
+            android:name=".ui.result.personality.ResultPersonalityActivity"
             android:exported="false" />
         <activity
-            android:name=".ResultPassionActivity"
+            android:name=".ui.result.passion.ResultPassionActivity"
             android:exported="false" />
         <activity
-            android:name=".ResultTalentActivity"
+            android:name=".ui.result.talent.ResultTalentActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.login.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".ui.register.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".StartPageActivity"
+            android:name=".ui.startpage.StartPageActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

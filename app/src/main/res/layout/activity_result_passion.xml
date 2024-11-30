@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".ResultPassionActivity">
+    tools:context=".ui.result.passion.ResultPassionActivity">
     <TextView
         android:id="@+id/textView24"
         android:layout_width="wrap_content"
