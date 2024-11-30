@@ -23,6 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivProfile"
         android:layout_width="71dp"
         android:layout_height="59dp"
         android:layout_marginTop="16dp"
@@ -66,20 +67,17 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <View
         android:id="@+id/view"
         android:layout_width="149dp"
         android:layout_height="145dp"
         android:layout_marginStart="52dp"
-        android:layout_marginBottom="36dp"
         android:background="@drawable/rounded_corner"
-        app:layout_constraintBottom_toTopOf="@+id/view4"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <View
         android:id="@+id/view4"
@@ -88,7 +86,8 @@
         android:layout_marginBottom="56dp"
         android:background="@drawable/rounded_corner"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/view" />
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <View
         android:id="@+id/view5"
@@ -97,19 +96,19 @@
         android:layout_marginBottom="56dp"
         android:background="@drawable/rounded_corner"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/view3" />
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
 
     <View
         android:id="@+id/view3"
         android:layout_width="149dp"
         android:layout_height="145dp"
         android:layout_marginStart="10dp"
-        android:layout_marginBottom="32dp"
         android:background="@drawable/rounded_corner"
-        app:layout_constraintBottom_toTopOf="@+id/view5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.218"
-        app:layout_constraintStart_toEndOf="@+id/view" />
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <ImageView
         android:id="@+id/imageView4"

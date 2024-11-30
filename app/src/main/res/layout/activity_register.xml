@@ -11,13 +11,14 @@
     <View
         android:id="@+id/view"
         android:layout_width="412dp"
-        android:layout_height="714dp"
+        android:layout_height="0dp"
         android:background="@drawable/rounded_corner"
         android:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView5"
@@ -59,8 +60,8 @@
         android:textColor="#257063"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/editTextText"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintStart_toStartOf="@+id/edRegisterName"
+        app:layout_constraintTop_toBottomOf="@+id/edRegisterName" />
 
     <TextView
         android:id="@+id/textView8"
@@ -72,8 +73,8 @@
         android:textColor="#257063"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/editTextText2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        app:layout_constraintStart_toStartOf="@+id/edRegisterBirthDate"
+        app:layout_constraintTop_toBottomOf="@+id/edRegisterBirthDate" />
 
     <TextView
         android:id="@+id/textView9"
@@ -85,8 +86,8 @@
         android:textColor="#257063"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/editTextText5"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText5" />
+        app:layout_constraintStart_toStartOf="@+id/edRegisterGender"
+        app:layout_constraintTop_toBottomOf="@+id/edRegisterGender" />
 
     <TextView
         android:id="@+id/textView10"
@@ -98,11 +99,11 @@
         android:textColor="#257063"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/editTextText3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+        app:layout_constraintStart_toStartOf="@+id/edRegisterEmail"
+        app:layout_constraintTop_toBottomOf="@+id/edRegisterEmail" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/edRegisterName"
         android:layout_width="349dp"
         android:layout_height="54dp"
         android:layout_marginTop="8dp"
@@ -112,6 +113,7 @@
         android:hint="Enter Your Name"
         android:inputType="text"
         android:textAlignment="textStart"
+        android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -119,7 +121,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/edRegisterBirthDate"
         android:layout_width="349dp"
         android:layout_height="51dp"
         android:layout_marginEnd="32dp"
@@ -129,6 +131,7 @@
         android:hint="Enter Your Birthdate"
         android:inputType="text"
         android:textAlignment="textStart"
+        android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -136,7 +139,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/edRegisterEmail"
         android:layout_width="357dp"
         android:layout_height="55dp"
         android:layout_marginEnd="32dp"
@@ -146,13 +149,14 @@
         android:hint="Enter Your Email"
         android:inputType="textEmailAddress"
         android:textAlignment="textStart"
+        android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView9"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <EditText
-        android:id="@+id/editTextText7"
+        android:id="@+id/edRegisterPassword"
         android:layout_width="358dp"
         android:layout_height="49dp"
         android:layout_marginEnd="28dp"
@@ -162,29 +166,41 @@
         android:hint="Enter Your Password"
         android:inputType="textPassword"
         android:textAlignment="textStart"
+        android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <EditText
-        android:id="@+id/editTextText5"
+        android:id="@+id/edRegisterGender"
         android:layout_width="349dp"
         android:layout_height="52dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/edit_text_border"
         android:ems="10"
         android:fontFamily="@font/poppinsmedium"
+        android:hint="Enter Your Gender"
         android:inputType="text"
-        android:text="Enter Your Name"
         android:textAlignment="textStart"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView8"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/registerButton"
         android:layout_width="185dp"
         android:layout_height="55dp"
         android:layout_marginTop="12dp"
@@ -196,10 +212,10 @@
         app:cornerRadius="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText7" />
+        app:layout_constraintTop_toBottomOf="@+id/edRegisterPassword" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/signupBtn"
         android:layout_width="168dp"
         android:layout_height="56dp"
         android:backgroundTint="#000000"
@@ -215,7 +231,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/signinBtn"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -224,12 +240,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="9dp"
+        android:layout_marginBottom="16dp"
         android:fontFamily="@font/poppinsextrabold"
         android:text="Already have an account?"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/signinBtn"
         app:layout_constraintVertical_bias="0.123" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
