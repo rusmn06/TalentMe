@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.talentme.databinding.FragmentHomeBinding
 import com.example.talentme.ui.profile.ProfileActivity
+import com.example.talentme.ui.recomendation.MajorRecomendationActivity
 import com.example.talentme.ui.test.passion.TestPassionActivity
 import com.example.talentme.ui.test.personality.TestPersonalityActivity
 import com.example.talentme.ui.test.talent.TestTalentActivity
@@ -43,22 +44,15 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireActivity(), ProfileActivity::class.java)
             startActivity(intent)
         }
-        binding.view.setOnClickListener {
-            val intent = Intent(requireActivity(), TestPersonalityActivity::class.java)
-            startActivity(intent)
-        }
-        binding.view4.setOnClickListener {
-            val intent = Intent(requireActivity(), TestPassionActivity::class.java)
-            startActivity(intent)
-        }
         binding.view3.setOnClickListener {
             val intent = Intent(requireActivity(), TestTalentActivity::class.java)
             startActivity(intent)
         }
         binding.view5.setOnClickListener {
-            val intent = Intent(requireActivity(), TestTalentActivity::class.java)
+            val intent = Intent(requireActivity(), MajorRecomendationActivity::class.java)
             startActivity(intent)
         }
+
 
     }
 
