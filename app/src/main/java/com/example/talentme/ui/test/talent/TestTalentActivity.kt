@@ -27,32 +27,30 @@ class TestTalentActivity : AppCompatActivity() {
         binding = ActivityTestTalentBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Set up RecyclerView
-        recyclerView = findViewById(R.id.recycler_view) // Pastikan ID ini sesuai dengan layout Anda
+        recyclerView = findViewById(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        // Membuat daftar pertanyaan
-        questionList = listOf(
-            Question("Jika kamu bisa menggunakan mesin waktu, lebih baik kamu pergi ke", "Masa Lalu 1", "Masa Depan 1", "Saya akan menjual mesin tersebut 1"),
-            Question("Jika kamu bisa menggunakan mesin waktu, lebih baik kamu pergi ke", "Masa Lalu 2", "Masa Depan 2", "Saya akan menjual mesin tersebut 2"),
-            Question("Jika kamu bisa menggunakan mesin waktu, lebih baik kamu pergi ke", "Masa Lalu 1", "Masa Depan 1", "Saya akan menjual mesin tersebut 1"),
-            Question("Jika kamu bisa menggunakan mesin waktu, lebih baik kamu pergi ke", "Masa Lalu 1", "Masa Depan 1", "Saya akan menjual mesin tersebut 1"),
-            Question("Jika kamu bisa menggunakan mesin waktu, lebih baik kamu pergi ke", "Masa Lalu 1", "Masa Depan 1", "Saya akan menjual mesin tersebut 1"),
-            Question("Jika kamu bisa menggunakan mesin waktu, lebih baik kamu pergi ke", "Masa Lalu 1", "Masa Depan 1", "Saya akan menjual mesin tersebut 1"),
-            Question("Jika kamu bisa menggunakan mesin waktu, lebih baik kamu pergi ke", "Masa Lalu 1", "Masa Depan 1", "Saya akan menjual mesin tersebut 1"),
-            Question("Jika kamu bisa menggunakan mesin waktu, lebih baik kamu pergi ke", "Masa Lalu 1", "Masa Depan 1", "Saya akan menjual mesin tersebut 1"),
-            Question("Jika kamu bisa menggunakan mesin waktu, lebih baik kamu pergi ke", "Masa Lalu 1", "Masa Depan 1", "Saya akan menjual mesin tersebut 1"),
-            Question("Jika kamu bisa menggunakan mesin waktu, lebih baik kamu pergi ke", "Masa Lalu 1", "Masa Depan 1", "Saya akan menjual mesin tersebut 1"),
-            Question("Jika kamu bisa menggunakan mesin waktu, lebih baik kamu pergi ke", "Masa Lalu 1", "Masa Depan 1", "Saya akan menjual mesin tersebut 1"),
-            Question("Jika kamu bisa menggunakan mesin waktu, lebih baik kamu pergi ke", "Masa Lalu 1", "Masa Depan 1", "Saya akan menjual mesin tersebut 1"),
-            Question("Jika kamu bisa menggunakan mesin waktu, lebih baik kamu pergi ke", "Masa Lalu 1", "Masa Depan 1", "Saya akan menjual mesin tersebut 1"),
 
+        questionList = listOf(
+            Question("If you had access to a time machine,would you rather travel to:", "Past", "Future", "I would sell it"),
+            Question("What type of person are you?", "early bird", "afternoon person", "night owl"),
+            Question("what is the nature of your job?", "work from home", "work by travel", "work with peers"),
+            Question("What type of person are you?", "extrovert", "ambivert", "introvert"),
+            Question("how good are you at studies(%)?", "80-100", "50-80", "below 50"),
+            Question("Which age group do you belong?", "8-16", "16-24", "above 24"),
+            Question("Talk about yourself(Text):", "confident", "not confident", "kinda confident"),
+            Question("What insipires you?", "seeing the world", "improving the world", "making others happy"),
+            Question("what type of person are you?", "Caring", "Intelligent", "adventurous"),
+            Question("You feel the happiest when you?", "solve a technical issue", "perform on stage", "create something"),
+            Question("Describe your ideal workout:", "Gym", "Outdoor exercise", "no workout"),
+            Question("How do you spend your money?", "shop yourself", "throw a party", "invest it"),
+            Question("describe your workspace:", "silent room", "informal lounge", "my favorite coffee shop"),
+            Question("Would you rather be:", "A world class villain", "unrecognised hero", "richest person but alone")
             )
 
         questionAdapter = QuestionAdapter(questionList)
         recyclerView.adapter = questionAdapter
 
-        // Mengatur padding untuk sistem bar
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

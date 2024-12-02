@@ -27,7 +27,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         viewModel.getSession().observe(this) { user ->
             Log.d("ViewModel", "Token dari session: ${user.token}")
-
+            if (!user.isLogin) {
+                startActivity(Intent(this, StartPageActivity::class.java))
+                finish()
+            }
         }
 
         val navView: BottomNavigationView = binding.navView
@@ -41,6 +44,19 @@ class MainActivity : AppCompatActivity() {
             )
         )
         navView.setupWithNavController(navController)
-
+        navView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navigation_dashboard -> {
+                    viewModel.logout()
+                    startActivity(Intent(this, StartPageActivity::class.java))
+                    finish()
+                    true
+                }
+                else -> {
+                    navController.navigate(item.itemId)
+                    true
+                }
+            }
+        }
     }
 }

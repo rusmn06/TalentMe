@@ -1,5 +1,6 @@
 package com.example.talentme.form
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,17 +30,25 @@ class QuestionAdapter(private val questionList: List<Question>) : RecyclerView.A
         holder.buttonSecond.text = question.buttonSecondText
         holder.buttonThird.text = question.buttonThirdText
 
-        // Set click listeners for buttons if needed
+        fun updateButtonColors() {
+            holder.buttonFirst.setBackgroundColor(if (question.selectedOptionIndex == 0) Color.GREEN else Color.LTGRAY)
+            holder.buttonSecond.setBackgroundColor(if (question.selectedOptionIndex == 1) Color.GREEN else Color.LTGRAY)
+            holder.buttonThird.setBackgroundColor(if (question.selectedOptionIndex == 2) Color.GREEN else Color.LTGRAY)
+        }
+        updateButtonColors()
         holder.buttonFirst.setOnClickListener {
-            // Handle button click for buttonFirst
+            question.selectedOptionIndex = 0
+            notifyDataSetChanged()
         }
 
         holder.buttonSecond.setOnClickListener {
-            // Handle button click for buttonSecond
+            question.selectedOptionIndex = 1
+            notifyDataSetChanged()
         }
 
         holder.buttonThird.setOnClickListener {
-            // Handle button click for buttonThird
+            question.selectedOptionIndex = 2
+            notifyDataSetChanged()
         }
     }
 
