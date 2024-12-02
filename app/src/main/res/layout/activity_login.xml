@@ -46,6 +46,8 @@
         android:fontFamily="@font/poppinsextrabold"
         android:text="Sign In"
         android:textColor="@color/white"
+        android:alpha="0"
+        tools:alpha="100"
 
         android:textSize="30sp"
         android:textStyle="bold"
@@ -63,6 +65,8 @@
         android:text="Email"
         android:textColor="#257063"
         android:textSize="20sp"
+        android:alpha="0"
+        tools:alpha="100"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -77,6 +81,8 @@
         android:textColor="#257063"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:alpha="0"
+        tools:alpha="100"
         app:layout_constraintStart_toStartOf="@+id/edRegisterEmail"
         app:layout_constraintTop_toBottomOf="@+id/edRegisterEmail" />
 
@@ -91,6 +97,8 @@
         android:hint="Enter Your Email"
         android:inputType="textEmailAddress"
         android:textAlignment="textStart"
+        android:alpha="0"
+        tools:alpha="100"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -108,6 +116,8 @@
         android:hint="Enter Your Password"
         android:inputType="textPassword"
         android:textAlignment="textStart"
+        android:alpha="0"
+        tools:alpha="100"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -126,6 +136,8 @@
         android:textColor="@color/black"
         android:textSize="16sp"
         app:cornerRadius="10sp"
+        android:alpha="0"
+        tools:alpha="100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edRegisterPassword" />
@@ -138,6 +150,8 @@
         android:backgroundTint="#000000"
         android:fontFamily="@font/poppinsextrabold"
         android:text="Sign Up"
+        android:alpha="0"
+        tools:alpha="100"
 
         android:textAlignment="textStart"
         android:textColor="@color/white"
@@ -162,6 +176,8 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:alpha="0"
+        tools:alpha="100"
         app:layout_constraintTop_toBottomOf="@+id/signinBtn"
         app:layout_constraintVertical_bias="0.085" />
 

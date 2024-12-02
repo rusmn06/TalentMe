@@ -1,5 +1,7 @@
 package com.example.talentme.ui.register
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -32,6 +34,7 @@ class RegisterActivity : AppCompatActivity() {
         }
         setupAction()
         observeViewModel()
+        playAnimation()
     }
     private fun setupAction() {
         binding.registerButton.setOnClickListener {
@@ -56,6 +59,7 @@ class RegisterActivity : AppCompatActivity() {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
+
     }
     private fun observeViewModel() {
         viewModel.isLoading.observe(this) { isLoading ->
@@ -90,6 +94,28 @@ class RegisterActivity : AppCompatActivity() {
             setPositiveButton("OK", null)
             create()
             show()
+        }
+    }
+    private fun playAnimation(){
+        val title = ObjectAnimator.ofFloat(binding.textView5, View.ALPHA, 1f).setDuration(420)
+        val tvName = ObjectAnimator.ofFloat(binding.textView6, View.ALPHA, 1f).setDuration(420)
+        val tvBirthdate = ObjectAnimator.ofFloat(binding.textView7, View.ALPHA, 1f).setDuration(420)
+        val tvGender = ObjectAnimator.ofFloat(binding.textView8, View.ALPHA, 1f).setDuration(420)
+        val tvEmail = ObjectAnimator.ofFloat(binding.textView9, View.ALPHA, 1f).setDuration(420)
+        val tvPassword = ObjectAnimator.ofFloat(binding.textView10, View.ALPHA, 1f).setDuration(420)
+        val tvMessage = ObjectAnimator.ofFloat(binding.textView11, View.ALPHA, 1f).setDuration(420)
+
+        val nameEditText = ObjectAnimator.ofFloat(binding.edRegisterName, View.ALPHA, 1f).setDuration(420)
+        val birthdateEditText = ObjectAnimator.ofFloat(binding.edRegisterBirthDate, View.ALPHA, 1f).setDuration(420)
+        val genderEditText = ObjectAnimator.ofFloat(binding.edRegisterGender, View.ALPHA, 1f).setDuration(420)
+        val emailEditText = ObjectAnimator.ofFloat(binding.edRegisterEmail, View.ALPHA, 1f).setDuration(420)
+        val passwordEditText = ObjectAnimator.ofFloat(binding.edRegisterPassword, View.ALPHA, 1f).setDuration(420)
+        val signUpBtn = ObjectAnimator.ofFloat(binding.registerButton, View.ALPHA, 1f).setDuration(420)
+        val signInBtn = ObjectAnimator.ofFloat(binding.signupBtn, View.ALPHA, 1f).setDuration(420)
+
+        AnimatorSet().apply {
+            playSequentially(title,tvName,nameEditText,tvBirthdate,birthdateEditText,tvGender,genderEditText,tvEmail,emailEditText,tvPassword,passwordEditText,signUpBtn, tvMessage, signInBtn)
+            start()
         }
     }
 
