@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppinsextrabold"
-            android:text="Kesehatan Masyarakat"
+            android:text="@string/major"
             android:textColor="#009688"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppinsmedium"
-            android:text="Sektor : Kesehatan"
+            android:text="@string/sector_recomendation"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppinsmedium"
-            android:text="Universitas Lambung Mangkurat"
+            android:text="@string/university"
             android:textColor="#000000"
             android:textSize="18sp" />
 

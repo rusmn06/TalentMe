@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
             android:fontFamily="@font/poppinsextrabold"
-            android:text="Talent and Passion Test"
+            android:text="@string/test_name"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -36,17 +36,17 @@
             android:layout_marginTop="16dp"
             tools:listitem="@layout/item_question"/>
 
-        <ImageButton
+        <Button
             android:id="@+id/continue_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:background="@null"
-            android:src="@drawable/button_background"
-            app:layout_constraintTop_toBottomOf="@id/recycler_view"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:backgroundTint="#009688"
             android:contentDescription="@string/continue_button_desc"
-            android:layout_marginBottom="16dp"/>
+            android:fontFamily="@font/poppinsextrabold"
+            android:text="@string/continue_button_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recycler_view" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

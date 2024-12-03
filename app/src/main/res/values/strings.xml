@@ -4,6 +4,146 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="profile_name">\@AkhmadRaihanRidha</string>
-    <string name="continue_button_desc">Continue Button</string>
+    <string name="continue_button_desc">Continue</string>
     <string name="select_gender">Select your Gender</string>
+    <string name="email_hint">Enter Your Email</string>
+    <string name="hint_password">Enter Your Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="password">Password</string>
+    <string name="hint_signup">Don\'t have an account?</string>
+    <string name="to_sign_in">Sign In</string>
+    <string name="email">Email</string>
+    <string name="major_recomendation_title">Major Recomendation</string>
+    <string name="back_to_home">Back to Home</string>
+    <string name="talent_me_app_com">talent.me@app.com</string>
+    <string name="account_info_title">Account Info</string>
+    <string name="name_title">Name</string>
+    <string name="name_profile">Raihan</string>
+    <string name="birth_date_title">Birth Date</string>
+    <string name="birthdate_profile">08 September 2004</string>
+    <string name="gender_title">Gender</string>
+    <string name="gender_profile">Male</string>
+    <string name="email_title">Email</string>
+    <string name="email_profile">Akhmad@RaihanRidha.com</string>
+    <string name="hint_birthdate">Pick your birthdate</string>
+    <string name="hint_name">Enter Your Name</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="password_title">Password</string>
+    <string name="test_result_title">Test Result</string>
+    <string name="your_major_sector_is">Your major sector is :</string>
+    <string name="sector">IT Sector</string>
+    <string name="get_to_know_your">Get to know your</string>
+    <string name="career">Career</string>
+    <string name="at_your_phone">At Your Phone</string>
+    <string name="follow_the_personality_test_talent_test_and_passion_test">Follow the personality test, Talent test, and Passion Test</string>
+    <string name="get_started">Get Started</string>
+    <string name="test_name">Talent and Passion Test</string>
+    <string name="welcome">Welcome, Raihan!</string>
+    <string name="hint_home">Please do the test below to know your career!</string>
+    <string name="test">Test</string>
+    <string name="result">Result</string>
+    <string name="talent_test">Talent Test</string>
+    <string name="see_your_career">See Your Career</string>
+    <string name="settings">Settings</string>
+    <string name="night_mode">Night Mode</string>
+    <string name="enable_dark_mode">Enable Dark Mode</string>
+    <string name="set_language">Set Language</string>
+    <string name="choose_your_language">Choose Your Language</string>
+    <string name="major">Kesehatan Masyarakat</string>
+    <string name="sector_recomendation">Sektor : Kesehatan</string>
+    <string name="university">Universitas Lambung Mangkurat</string>
+    <string name="gender_hint">Select your Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+
+
+    <string name="question_1">If you had access to a time machine, would you rather travel to:</string>
+    <string name="question_1_option1">Past</string>
+    <string name="question_1_option2">Future</string>
+    <string name="question_1_option3">I would sell it</string>
+
+    <string name="question_2">What type of person are you?</string>
+    <string name="question_2_option1">Early bird</string>
+    <string name="question_2_option2">Afternoon person</string>
+    <string name="question_2_option3">Night owl</string>
+
+    <string name="question_3">What is the nature of your job?</string>
+    <string name="question_3_option1">Work from home</string>
+    <string name="question_3_option2">Work by travel</string>
+    <string name="question_3_option3">Work with peers</string>
+
+    <string name="question_4">What type of person are you?</string>
+    <string name="question_4_option1">Extrovert</string>
+    <string name="question_4_option2">Ambivert</string>
+    <string name="question_4_option3">Introvert</string>
+
+    <string name="question_5">How good are you at studies (%)?</string>
+    <string name="question_5_option1">80-100</string>
+    <string name="question_5_option2">50-80</string>
+    <string name="question_5_option3">Below 50</string>
+
+    <string name="question_6">Which age group do you belong?</string>
+    <string name="question_6_option1">8-16</string>
+    <string name="question_6_option2">16-24</string>
+    <string name="question_6_option3">Above 24</string>
+
+    <string name="question_7">Talk about yourself (Text):</string>
+    <string name="question_7_option1">Confident</string>
+    <string name="question_7_option2">Not confident</string>
+    <string name="question_7_option3">Kinda confident</string>
+
+    <string name="question_8">What inspires you?</string>
+    <string name="question_8_option1">Seeing the world</string>
+    <string name="question_8_option2">Improving the world</string>
+    <string name="question_8_option3">Making others happy</string>
+
+    <string name="question_9">What type of person are you?</string>
+    <string name="question_9_option1">Caring</string>
+    <string name="question_9_option2">Intelligent</string>
+    <string name="question_9_option3">Adventurous</string>
+
+    <string name="question_10">You feel the happiest when you?</string>
+    <string name="question_10_option1">Solve a technical issue</string>
+    <string name="question_10_option2">Perform on stage</string>
+    <string name="question_10_option3">Create something</string>
+
+    <string name="question_11">Describe your ideal workout:</string>
+    <string name="question_11_option1">Gym</string>
+    <string name="question_11_option2">Outdoor exercise</string>
+    <string name="question_11_option3">No workout</string>
+
+    <string name="question_12">How do you spend your money?</string>
+    <string name="question_12_option1">Shop yourself</string>
+    <string name="question_12_option2">Throw a party</string>
+    <string name="question_12_option3">Invest it</string>
+
+    <string name="question_13">Describe your workspace:</string>
+    <string name="question_13_option1">Silent room</string>
+    <string name="question_13_option2">Informal lounge</string>
+    <string name="question_13_option3">My favorite coffee shop</string>
+
+    <string name="question_14">What is your main priority in life?</string>
+    <string name="question_14_option1">Career and personal success</string>
+    <string name="question_14_option2">Family and social relationships</string>
+    <string name="question_14_option3">Life balance and personal happiness</string>
+
+    <string name="question_15">How good are you at mathematics?</string>
+    <string name="question_16">How good are you at physics?</string>
+    <string name="question_17">How good are you at chemistry?</string>
+    <string name="question_18">How good are you at biology?</string>
+    <string name="question_19">How good are you at English?</string>
+    <string name="question_20">How good are you at Indonesian?</string>
+    <string name="question_21">How good are you at economics?</string>
+    <string name="question_22">How good are you at information technology?</string>
+    <string name="question_23">How good are you at arts and design?</string>
+    <string name="question_24">How good are you at geography and history?</string>
+    <string name="question_25">How good are you at sociology and psychology?</string>
+
+    <string name="option_not_good">Not good</string>
+    <string name="option_good">Good</string>
+    <string name="option_very_good">Very good</string>
+    <string name="choose_language">Choose Your Language</string>
+
+
 </resources>

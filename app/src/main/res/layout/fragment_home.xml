@@ -15,10 +15,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppinsextrabold"
-        android:text="Welcome, Raihan!"
+        android:text="@string/welcome"
         android:textColor="#257063"
         android:textSize="30sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/ivProfile"
+        app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,8 +32,6 @@
 
         android:src="@drawable/img_16"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -41,7 +41,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/poppinsmedium"
-        android:text="Please do the test  below to  know your career!"
+        android:text="@string/hint_home"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:fontFamily="@font/poppinsmedium"
-        android:text="Test"
+        android:text="@string/test"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -77,7 +77,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="1dp"
         android:fontFamily="@font/poppinsmedium"
-        android:text="Result"
+        android:text="@string/result"
         android:textColor="@color/white"
         android:textSize="24sp"
 
@@ -137,7 +137,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppinsmedium"
-        android:text="Talent Test"
+        android:text="@string/talent_test"
         android:textColor="#257063"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/view3"
@@ -152,7 +152,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppinsmedium"
-        android:text="See Your Career"
+        android:text="@string/see_your_career"
         android:textColor="#257063"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/view5"

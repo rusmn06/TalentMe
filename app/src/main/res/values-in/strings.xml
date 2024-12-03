@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TalentMe</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_dashboard">Dasbor</string>
+    <string name="title_notifications">Notifikasi</string>
+    <string name="profile_name">\@AkhmadRaihanRidha</string>
+    <string name="continue_button_desc">Lanjutkan</string>
+    <string name="select_gender">Pilih Jenis Kelamin Anda</string>
+    <string name="email_hint">Masukkan Email Anda</string>
+    <string name="hint_password">Masukkan Kata Sandi Anda</string>
+    <string name="sign_in">Masuk</string>
+    <string name="sign_up">Daftar</string>
+    <string name="password">Kata Sandi</string>
+    <string name="hint_signup">Belum punya akun?</string>
+    <string name="to_sign_in">Masuk</string>
+    <string name="email">Email</string>
+    <string name="major_recomendation_title">Rekomendasi Jurusan</string>
+    <string name="back_to_home">Kembali ke Beranda</string>
+    <string name="talent_me_app_com">talent.me@app.com</string>
+    <string name="account_info_title">Informasi Akun</string>
+    <string name="name_title">Nama</string>
+    <string name="name_profile">Raihan</string>
+    <string name="birth_date_title">Tanggal Lahir</string>
+    <string name="birthdate_profile">08 September 2004</string>
+    <string name="gender_title">Jenis Kelamin</string>
+    <string name="gender_profile">Laki-laki</string>
+    <string name="email_title">Email</string>
+    <string name="email_profile">Akhmad@RaihanRidha.com</string>
+    <string name="hint_birthdate">Pilih tanggal lahir Anda</string>
+    <string name="hint_name">Masukkan Nama Anda</string>
+    <string name="already_have_an_account">Sudah punya akun?</string>
+    <string name="password_title">Kata Sandi</string>
+    <string name="test_result_title">Hasil Tes</string>
+    <string name="your_major_sector_is">Jurusan Anda adalah :</string>
+    <string name="sector">Sektor IT</string>
+    <string name="get_to_know_your">Kenali</string>
+    <string name="career">Karier</string>
+    <string name="at_your_phone">Di Ponsel Anda</string>
+    <string name="follow_the_personality_test_talent_test_and_passion_test">Ikuti tes kepribadian, tes bakat, dan tes minat</string>
+    <string name="get_started">Mulai</string>
+    <string name="test_name">Tes Bakat dan Minat</string>
+    <string name="welcome">Selamat Datang, Raihan!</string>
+    <string name="hint_home">Lakukan tes di bawah ini untuk mengetahui karier Anda!</string>
+    <string name="test">Tes</string>
+    <string name="result">Hasil</string>
+    <string name="talent_test">Tes Bakat</string>
+    <string name="see_your_career">Lihat Karier Anda</string>
+    <string name="settings">Pengaturan</string>
+    <string name="night_mode">Mode Malam</string>
+    <string name="enable_dark_mode">Aktifkan Mode Gelap</string>
+    <string name="set_language">Atur Bahasa</string>
+    <string name="choose_your_language">Pilih Bahasa Anda</string>
+    <string name="major">Kesehatan Masyarakat</string>
+    <string name="sector_recomendation">Sektor: Kesehatan</string>
+    <string name="university">Universitas Lambung Mangkurat</string>
+
+    <string name="gender_hint">Pilih Gender</string>
+    <string name="male">Laki-Laki</string>
+    <string name="female">Perempuan</string>
+
+    <string name="question_1">Jika Anda memiliki akses ke mesin waktu, apakah Anda lebih suka pergi ke:</string>
+    <string name="question_1_option1">Masa lalu</string>
+    <string name="question_1_option2">Masa depan</string>
+    <string name="question_1_option3">Saya akan menjualnya</string>
+
+    <string name="question_2">Tipe orang seperti apa Anda?</string>
+    <string name="question_2_option1">Orang pagi</string>
+    <string name="question_2_option2">Orang siang</string>
+    <string name="question_2_option3">Orang malam</string>
+
+    <string name="question_3">Apa sifat dari pekerjaan Anda?</string>
+    <string name="question_3_option1">Bekerja dari rumah</string>
+    <string name="question_3_option2">Bekerja dengan bepergian</string>
+    <string name="question_3_option3">Bekerja dengan rekan kerja</string>
+
+    <string name="question_4">Tipe orang seperti apa Anda?</string>
+    <string name="question_4_option1">Ekstrovert</string>
+    <string name="question_4_option2">Ambivert</string>
+    <string name="question_4_option3">Introvert</string>
+
+    <string name="question_5">Seberapa baik Anda dalam belajar (%)?</string>
+    <string name="question_5_option1">80-100</string>
+    <string name="question_5_option2">50-80</string>
+    <string name="question_5_option3">Di bawah 50</string>
+
+    <string name="question_6">Kelompok usia mana yang Anda masuki?</string>
+    <string name="question_6_option1">8-16</string>
+    <string name="question_6_option2">16-24</string>
+    <string name="question_6_option3">Di atas 24</string>
+
+    <string name="question_7">Bicarakan tentang diri Anda (Teks):</string>
+    <string name="question_7_option1">Percaya diri</string>
+    <string name="question_7_option2">Tidak percaya diri</string>
+    <string name="question_7_option3">Agak percaya diri</string>
+
+    <string name="question_8">Apa yang menginspirasi Anda?</string>
+    <string name="question_8_option1">Melihat dunia</string>
+    <string name="question_8_option2">Memperbaiki dunia</string>
+    <string name="question_8_option3">Membuat orang lain bahagia</string>
+
+    <string name="question_9">Tipe orang seperti apa Anda?</string>
+    <string name="question_9_option1">Peduli</string>
+    <string name="question_9_option2">Cerdas</string>
+    <string name="question_9_option3">Petualang</string>
+
+    <string name="question_10">Kapan Anda merasa paling bahagia?</string>
+    <string name="question_10_option1">Memecahkan masalah teknis</string>
+    <string name="question_10_option2">Tampil di panggung</string>
+    <string name="question_10_option3">Menciptakan sesuatu</string>
+
+    <string name="question_11">Deskripsikan latihan ideal Anda:</string>
+    <string name="question_11_option1">Gym</string>
+    <string name="question_11_option2">Latihan di luar ruangan</string>
+    <string name="question_11_option3">Tidak berolahraga</string>
+
+    <string name="question_12">Bagaimana Anda menghabiskan uang Anda?</string>
+    <string name="question_12_option1">Berbelanja untuk diri sendiri</string>
+    <string name="question_12_option2">Mengadakan pesta</string>
+    <string name="question_12_option3">Menginvestasikannya</string>
+
+    <string name="question_13">Deskripsikan ruang kerja Anda:</string>
+    <string name="question_13_option1">Ruangan yang sunyi</string>
+    <string name="question_13_option2">Ruang santai informal</string>
+    <string name="question_13_option3">Kedai kopi favorit saya</string>
+
+    <string name="question_14">Apa prioritas utama Anda dalam hidup?</string>
+    <string name="question_14_option1">Karier dan kesuksesan pribadi</string>
+    <string name="question_14_option2">Keluarga dan hubungan sosial</string>
+    <string name="question_14_option3">Keseimbangan hidup dan kebahagiaan pribadi</string>
+
+    <string name="question_15">Seberapa baik Anda dalam matematika?</string>
+    <string name="question_16">Seberapa baik Anda dalam fisika?</string>
+    <string name="question_17">Seberapa baik Anda dalam kimia?</string>
+    <string name="question_18">Seberapa baik Anda dalam biologi?</string>
+    <string name="question_19">Seberapa baik Anda dalam bahasa Inggris?</string>
+    <string name="question_20">Seberapa baik Anda dalam bahasa Indonesia?</string>
+    <string name="question_21">Seberapa baik Anda dalam ekonomi?</string>
+    <string name="question_22">Seberapa baik Anda dalam teknologi informasi?</string>
+    <string name="question_23">Seberapa baik Anda dalam seni dan desain?</string>
+    <string name="question_24">Seberapa baik Anda dalam geografi dan sejarah?</string>
+    <string name="question_25">Seberapa baik Anda dalam sosiologi dan psikologi?</string>
+
+    <string name="option_not_good">Tidak baik</string>
+    <string name="option_good">Baik</string>
+    <string name="option_very_good">Sangat baik</string>
+    <string name="choose_language">Pilih Bahasa Anda</string>
+
+
+</resources>
