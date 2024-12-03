@@ -45,8 +45,19 @@ class TestTalentActivity : AppCompatActivity() {
             Question("Describe your ideal workout:", "Gym", "Outdoor exercise", "no workout"),
             Question("How do you spend your money?", "shop yourself", "throw a party", "invest it"),
             Question("describe your workspace:", "silent room", "informal lounge", "my favorite coffee shop"),
-            Question("Would you rather be:", "A world class villain", "unrecognised hero", "richest person but alone")
-            )
+            Question("What is your main priority in life?", "Career and personal success", "Family and social relationships", "Life balance and personal happiness"),
+            Question("How good are you at mathematics?", "Not good", "Good", "Very good"),
+            Question("How good are you at physics?", "Not good", "Good", "Very good"),
+            Question("How good are you at chemistry?", "Not good", "Good", "Very good"),
+            Question("How good are you at biology?", "Not good", "Good", "Very good"),
+            Question("How good are you at English?", "Not good", "Good", "Very good"),
+            Question("How good are you at Indonesian?", "Not good", "Good", "Very good"),
+            Question("How good are you at economics?", "Not good", "Good", "Very good"),
+            Question("How good are you at information technology?", "Not good", "Good", "Very good"),
+            Question("How good are you at arts and design?", "Not good", "Good", "Very good"),
+            Question("How good are you at geography and history?", "Not good", "Good", "Very good"),
+            Question("How good are you at sociology and psychology?", "Not good", "Good", "Very good")
+        )
 
         questionAdapter = QuestionAdapter(questionList)
         recyclerView.adapter = questionAdapter

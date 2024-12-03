@@ -2,9 +2,12 @@ package com.example.talentme.ui.register
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
+import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -17,6 +20,7 @@ import com.example.talentme.ViewModelFactory
 import com.example.talentme.databinding.ActivityRegisterBinding
 import com.example.talentme.ui.login.LoginActivity
 import kotlinx.coroutines.launch
+import java.util.Calendar
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
@@ -58,6 +62,26 @@ class RegisterActivity : AppCompatActivity() {
         binding.signupBtn.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
+        }
+        val spinnerGender: Spinner = findViewById(R.id.edRegisterGender)
+        val genderOptions = arrayOf("Choose your Gender","Female", "Male")
+
+        val adapter = ArrayAdapter(this,R.layout.selected_item, genderOptions)
+        adapter.setDropDownViewResource(R.layout.spinner_item)
+        spinnerGender.adapter = adapter
+
+        binding.edRegisterBirthDate.setOnClickListener {
+            val calendar = Calendar.getInstance()
+            val year = calendar.get(Calendar.YEAR)
+            val month = calendar.get(Calendar.MONTH)
+            val day = calendar.get(Calendar.DAY_OF_MONTH)
+
+            val datePickerDialog = DatePickerDialog(this, { _, selectedYear, selectedMonth, selectedDay ->
+                val selectedDate = "$selectedDay/${selectedMonth + 1}/$selectedYear"
+                binding.edRegisterBirthDate.setText(selectedDate)
+            }, year, month, day)
+
+            datePickerDialog.show()
         }
 
     }
