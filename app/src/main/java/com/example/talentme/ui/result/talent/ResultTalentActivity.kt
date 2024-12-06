@@ -22,6 +22,8 @@ class ResultTalentActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val predictionResult = intent.getStringExtra("PREDICTION_RESULT")
+        binding.button.text = predictionResult
         binding.button4.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

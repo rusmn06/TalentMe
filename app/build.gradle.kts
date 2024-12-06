@@ -35,6 +35,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        mlModelBinding = true
     }
 }
 
@@ -66,4 +67,10 @@ dependencies {
     implementation (libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.glide)
     implementation (libs.androidx.recyclerview)
+    implementation (libs.tensorflow.tensorflow.lite)
+    implementation(libs.tensorflow.lite.metadata.v044)
+    implementation(libs.play.services.tflite.support)
+    implementation(libs.play.services.tflite.gpu.v1620)
+    implementation(libs.tensorflow.lite.task.vision.play.services)
+    implementation(libs.tensorflow.lite.gpu.v290)
 }

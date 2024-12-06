@@ -145,6 +145,8 @@
     <string name="option_good">Baik</string>
     <string name="option_very_good">Sangat baik</string>
     <string name="choose_language">Pilih Bahasa Anda</string>
+    <string name="tflite_is_not_initialized_yet">Model is not initialize yet</string>
+    <string name="no_tflite_interpreter_loaded">no intreperter loaded</string>
 
 
 </resources>
