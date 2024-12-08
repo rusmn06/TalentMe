@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         viewModel.getSession().observe(this) { user ->
             Log.d("ViewModel", "Token dari session: ${user.token}")
+            Log.d("ViewModel", "Status login dari session: ${user.isLogin}")
             if (!user.isLogin) {
                 startActivity(Intent(this, StartPageActivity::class.java))
                 finish()

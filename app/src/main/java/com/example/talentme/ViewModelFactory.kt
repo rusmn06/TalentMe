@@ -7,9 +7,11 @@ import com.example.talentme.data.repository.RecomendationRepository
 import com.example.talentme.data.repository.UserRepository
 import com.example.talentme.di.Injection
 import com.example.talentme.ui.login.LoginViewModel
+import com.example.talentme.ui.profile.ProfileActivityViewModel
 import com.example.talentme.ui.register.RegisterViewModel
 
 import com.example.talentme.ui.result.passion.ResultPassionViewModel
+import com.example.talentme.ui.test.talent.TestTalentViewModel
 
 class ViewModelFactory(private val userRepository: UserRepository, private val recomendationRepository: RecomendationRepository) : ViewModelProvider.NewInstanceFactory() {
 
@@ -27,6 +29,12 @@ class ViewModelFactory(private val userRepository: UserRepository, private val r
             }
             modelClass.isAssignableFrom(ResultPassionViewModel::class.java) -> {
                 ResultPassionViewModel(recomendationRepository) as T
+            }
+            modelClass.isAssignableFrom(TestTalentViewModel::class.java) -> {
+                TestTalentViewModel(recomendationRepository) as T
+            }
+            modelClass.isAssignableFrom(ProfileActivityViewModel::class.java) -> {
+                ProfileActivityViewModel(userRepository) as T
             }
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }

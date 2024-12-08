@@ -20,7 +20,9 @@ import com.example.talentme.ViewModelFactory
 import com.example.talentme.databinding.ActivityRegisterBinding
 import com.example.talentme.ui.login.LoginActivity
 import kotlinx.coroutines.launch
+import java.text.SimpleDateFormat
 import java.util.Calendar
+import java.util.Locale
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
@@ -45,6 +47,8 @@ class RegisterActivity : AppCompatActivity() {
             val name = binding.edRegisterName.text.toString()
             val email = binding.edRegisterEmail.text.toString()
             val password = binding.edRegisterPassword.text.toString()
+            val birthDate = binding.edRegisterBirthDate.text.toString()
+            val gender = binding.edRegisterGender.selectedItem.toString()
             if (name.isBlank() || email.isBlank() || password.isBlank()) {
                 AlertDialog.Builder(this).apply {
                     setTitle("Error")
@@ -55,8 +59,12 @@ class RegisterActivity : AppCompatActivity() {
                 }
                 return@setOnClickListener
             }
+            val inputFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+            val outputFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+            val date = inputFormat.parse(birthDate)
+            val formattedDate = outputFormat.format(date)
             viewModel.viewModelScope.launch {
-                viewModel.register(name, email, password)
+                viewModel.register(name, gender, formattedDate, email, password)
             }
         }
         binding.signupBtn.setOnClickListener {
@@ -64,7 +72,7 @@ class RegisterActivity : AppCompatActivity() {
             startActivity(intent)
         }
         val spinnerGender: Spinner = findViewById(R.id.edRegisterGender)
-        val genderOptions = arrayOf("Choose your Gender","Female", "Male")
+        val genderOptions = arrayOf("Choose your Gender","female", "male")
 
         val adapter = ArrayAdapter(this,R.layout.selected_item, genderOptions)
         adapter.setDropDownViewResource(R.layout.spinner_item)
@@ -90,18 +98,16 @@ class RegisterActivity : AppCompatActivity() {
             binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
         }
         viewModel.signUpResult.observe(this) { response ->
-            if (response.error == false) {
-                AlertDialog.Builder(this).apply {
-                    setTitle("Success")
-                    setMessage(response.message ?: "Registration successful")
-                    setPositiveButton("OK") { _, _ ->
-                        val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
-                        startActivity(intent)
-                        finish()
-                    }
-                    create()
-                    show()
+            AlertDialog.Builder(this).apply {
+                setTitle("Success")
+                setMessage(response.message ?: "Registration successful")
+                setPositiveButton("OK") { _, _ ->
+                    val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+                    startActivity(intent)
+                    finish()
                 }
+                create()
+                show()
             }
         }
 

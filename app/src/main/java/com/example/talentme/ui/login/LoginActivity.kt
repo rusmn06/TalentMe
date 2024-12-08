@@ -58,11 +58,12 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
             viewModel.login(email, password)
-            viewModel.loginResult.value?.loginResult?.token?.let { it1 ->
+            /*viewModel.loginResult.value?.message?.token?.let { it1 ->
                 UserModel(email,
                     it1
                 )
-            }?.let { it2 -> viewModel.saveSession(it2) }
+            }?.let { it2 -> viewModel.saveSession(it2) }*/
+
         }
         binding.signupBtn.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
@@ -75,11 +76,15 @@ class LoginActivity : AppCompatActivity() {
         }
 
         viewModel.loginResult.observe(this) { response ->
-            if (response.error == false) {
-                val loginResult = response.loginResult
-                if (loginResult?.name != null && loginResult.token != null) {
-                    val userModel = UserModel(loginResult.name, loginResult.token, true)
-                    viewModel.saveSession(userModel)
+            if (response.message == "Berhasil Login") {
+                val loginResult = response.user
+                val token = "token"
+                if (loginResult?.idUser != null && loginResult.email != null) {
+                    val userModel =
+                        loginResult.nama?.let { UserModel(it, loginResult.email, "", "", token, true) }
+                    if (userModel != null) {
+                        viewModel.saveSession(userModel)
+                    }
                     AlertDialog.Builder(this).apply {
                         setTitle("Yeah!")
                         setMessage("login Succeed. Can't wait to know your major?")

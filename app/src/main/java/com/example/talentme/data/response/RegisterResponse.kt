@@ -9,4 +9,5 @@ data class RegisterResponse(
 
     @field:SerializedName("message")
     val message: String? = null
+
 )

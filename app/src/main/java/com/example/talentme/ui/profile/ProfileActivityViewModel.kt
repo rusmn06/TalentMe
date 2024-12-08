@@ -1,4 +1,4 @@
-package com.example.talentme.ui.register
+package com.example.talentme.ui.profile
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -6,16 +6,14 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.talentme.data.repository.UserRepository
 import com.example.talentme.data.response.ErrorResponse
-import com.example.talentme.data.response.RegisterResponse
-import com.example.talentme.data.response.RegisterUserResponse
+import com.example.talentme.data.response.GetUserByIdResponse
 import com.google.gson.Gson
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 
-
-class RegisterViewModel(private val repository: UserRepository) : ViewModel(){
-    private val _signUpResult = MutableLiveData<RegisterUserResponse>()
-    val signUpResult: LiveData<RegisterUserResponse> = _signUpResult
+class ProfileActivityViewModel(val userRepository: UserRepository) : ViewModel(){
+    private val _getUserByIdResult = MutableLiveData<GetUserByIdResponse>()
+    val getUserByIdResult: LiveData<GetUserByIdResponse> = _getUserByIdResult
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
@@ -23,15 +21,15 @@ class RegisterViewModel(private val repository: UserRepository) : ViewModel(){
     private val _errorMessage = MutableLiveData<String?>()
     val errorMessage: LiveData<String?> = _errorMessage
 
-    private lateinit var response: RegisterUserResponse
+    private lateinit var response: GetUserByIdResponse
 
-    fun register(name: String, gender : String, birthDate : String, email: String, password: String) {
+    fun GetUserById(id : Int) {
         viewModelScope.launch {
             _isLoading.postValue(true)
             try {
-                response = repository.register(name, gender, birthDate, email, password)
+                response = userRepository.getUserbyId(id)
                 if (isActive) {
-                    _signUpResult.postValue(response)
+                    _getUserByIdResult.postValue(response)
                 }
                 _errorMessage.value = null
             } catch (e: Exception) {

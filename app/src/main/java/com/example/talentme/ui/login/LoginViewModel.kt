@@ -8,13 +8,14 @@ import com.example.talentme.data.pref.UserModel
 import com.example.talentme.data.repository.UserRepository
 import com.example.talentme.data.response.ErrorResponse
 import com.example.talentme.data.response.LoginResponse
+import com.example.talentme.data.response.LoginUserResponse
 import com.google.gson.Gson
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 
 class LoginViewModel(private val repository: UserRepository) : ViewModel() {
-    private val _loginResult = MutableLiveData<LoginResponse>()
-    val loginResult: LiveData<LoginResponse> = _loginResult
+    private val _loginResult = MutableLiveData<LoginUserResponse>()
+    val loginResult: LiveData<LoginUserResponse> = _loginResult
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
@@ -22,7 +23,7 @@ class LoginViewModel(private val repository: UserRepository) : ViewModel() {
     private val _errorMessage = MutableLiveData<String?>()
     val errorMessage: LiveData<String?> = _errorMessage
 
-    private lateinit var response: LoginResponse
+    private lateinit var response: LoginUserResponse
 
     fun login(email: String, password: String) {
         viewModelScope.launch {
