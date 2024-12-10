@@ -48,10 +48,6 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireActivity(), TestTalentActivity::class.java)
             startActivity(intent)
         }
-        binding.view5.setOnClickListener {
-            val intent = Intent(requireActivity(), MajorRecomendationActivity::class.java)
-            startActivity(intent)
-        }
 
 
     }

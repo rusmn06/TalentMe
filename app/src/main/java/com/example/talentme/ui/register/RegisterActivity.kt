@@ -17,6 +17,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.example.talentme.R
 import com.example.talentme.ViewModelFactory
+import com.example.talentme.data.room.User
 import com.example.talentme.databinding.ActivityRegisterBinding
 import com.example.talentme.ui.login.LoginActivity
 import kotlinx.coroutines.launch
@@ -27,6 +28,12 @@ import java.util.Locale
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
     private lateinit var viewModel: RegisterViewModel
+    private  var name : String = ""
+    private  var email : String = ""
+    private  var password : String = ""
+    private  var birthDate : String = ""
+    private  var gender : String = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -44,11 +51,11 @@ class RegisterActivity : AppCompatActivity() {
     }
     private fun setupAction() {
         binding.registerButton.setOnClickListener {
-            val name = binding.edRegisterName.text.toString()
-            val email = binding.edRegisterEmail.text.toString()
-            val password = binding.edRegisterPassword.text.toString()
-            val birthDate = binding.edRegisterBirthDate.text.toString()
-            val gender = binding.edRegisterGender.selectedItem.toString()
+            name = binding.edRegisterName.text?.toString() ?: ""
+            email = binding.edRegisterEmail.text?.toString() ?: ""
+            password = binding.edRegisterPassword.text?.toString() ?: ""
+            birthDate = binding.edRegisterBirthDate.text?.toString() ?: ""
+            gender = binding.edRegisterGender.selectedItem?.toString() ?: ""
             if (name.isBlank() || email.isBlank() || password.isBlank()) {
                 AlertDialog.Builder(this).apply {
                     setTitle("Error")
@@ -98,9 +105,14 @@ class RegisterActivity : AppCompatActivity() {
             binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
         }
         viewModel.signUpResult.observe(this) { response ->
+            val user = response.userId?.let { User(it, name, gender, birthDate, email, password) }
+            if (user != null) {
+                viewModel.insertUser(user)
+            }
             AlertDialog.Builder(this).apply {
                 setTitle("Success")
                 setMessage(response.message ?: "Registration successful")
+
                 setPositiveButton("OK") { _, _ ->
                     val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
                     startActivity(intent)

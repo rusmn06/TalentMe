@@ -2,6 +2,8 @@ package com.example.talentme.ui.test.talent
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
@@ -77,15 +79,41 @@ class TestTalentActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        viewModel.isLoading.observe(this) { isLoading ->
+            binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+        }
+        viewModel.predictResult.observe(this) { result ->
+            val dummyData = viewModel.getDummyResponse()
+            if (result?.data != null) {
+                Log.d("TestTalentActivity", "Prediction result: $result")
+                val intent = Intent(this, ResultTalentActivity::class.java).apply {
+                    putExtra("PREDICTION_RESULT", result)
+                }
+                finish()
+                startActivity(intent)
+            } else {
+
+                Log.e("TestTalentActivity", "Prediction failed, result is null or empty")
+                Toast.makeText(this, "Prediction failed, please try again. using dummy data", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, ResultTalentActivity::class.java).apply {
+                    putExtra("PREDICTION_RESULT", dummyData)
+                }
+                finish()
+                startActivity(intent)
+            }
+        }
 
 
         binding.continueButton.setOnClickListener {
             val userInput = getUserInput()
+            Log.d("TestTalentActivity", "User Input: $userInput")
             if (userInput.contains(-1)) {
                 Toast.makeText(this, "Please answer all questions", Toast.LENGTH_SHORT).show()
             } else {
                 val inputData = listOf(userInput)
                 val input = PredictRequest(inputData)
+                Log.d("TestTalentActivity", "Input Data sent to ViewModel: $input")
+                viewModel.predict(input)
                 /*predictionHelper.predict(inputData.toString())
                 predictionHelper.onResult = { result ->
                     val intent = Intent(this, ResultTalentActivity::class.java).apply {
@@ -97,15 +125,6 @@ class TestTalentActivity : AppCompatActivity() {
                 predictionHelper.onError = { errorMessage ->
                     Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
                 }*/
-                viewModel.loginResult.observe(this){
-                    viewModel.predict(input)
-                    val intent = Intent(this, ResultTalentActivity::class.java).apply {
-                        putExtra("PREDICTION_RESULT", it)
-                    }
-                    startActivity(intent)
-                    finish()
-                }
-
             }
         }
     }

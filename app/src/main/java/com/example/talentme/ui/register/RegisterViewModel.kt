@@ -8,6 +8,7 @@ import com.example.talentme.data.repository.UserRepository
 import com.example.talentme.data.response.ErrorResponse
 import com.example.talentme.data.response.RegisterResponse
 import com.example.talentme.data.response.RegisterUserResponse
+import com.example.talentme.data.room.User
 import com.google.gson.Gson
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
@@ -49,6 +50,18 @@ class RegisterViewModel(private val repository: UserRepository) : ViewModel(){
             } finally {
                 _isLoading.postValue(false)
             }
+        }
+    }
+    fun insertUser(user: User) {
+        viewModelScope.launch {
+            repository.insert(user)
+        }
+    }
+
+    fun fetchAllUsers() {
+        viewModelScope.launch {
+            val users = repository.getAllUsers()
+            // Do something with users
         }
     }
 

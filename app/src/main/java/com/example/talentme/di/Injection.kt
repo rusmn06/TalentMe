@@ -8,6 +8,7 @@ import com.example.talentme.data.repository.UserRepository
 import com.example.talentme.data.retrofit.ApiConfig
 import com.example.talentme.data.retrofit.ModelApiConfig
 import com.example.talentme.data.retrofit.UserApiConfig
+import com.example.talentme.data.room.DatabaseBuilder
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 
@@ -15,7 +16,8 @@ object Injection {
     fun provideRepository(context: Context): UserRepository {
         val pref = UserPreference.getInstance(context.dataStore)
         val apiService = UserApiConfig.getUserApiService()
-        return UserRepository.getInstance(pref, apiService)
+        val userDao = DatabaseBuilder.getInstance(context).userDao()
+        return UserRepository.getInstance(pref, apiService, userDao)
     }
     fun provideRecomendationRepository(context: Context): RecomendationRepository {
         val pref = UserPreference.getInstance(context.dataStore)

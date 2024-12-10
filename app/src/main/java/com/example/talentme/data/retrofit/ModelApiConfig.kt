@@ -6,7 +6,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ModelApiConfig {
-    private const val BASE_URL = "https://your-api-domain.com/api/"
+    private const val BASE_URL = "https://6rd24.wiremockapi.cloud/"
     fun getUserApiService(): ModelApiService {
         val loggingInterceptor = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
 

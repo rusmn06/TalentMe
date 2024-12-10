@@ -2,6 +2,7 @@ package com.example.talentme.ui.profile
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
@@ -34,15 +35,23 @@ class ProfileActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        viewModel.GetUserById(1)
+        viewModel.getSession().observe(this) { user ->
+            Log.d("ProfileActivity", "User ID: ${user.id}")
+            viewModel.getUserById(user.id)
+            viewModel.getUserByIdRoom.observe(this){
+                if (it != null){
+                    binding.textView28.text = it.email
+                    binding.textView32.text = it.name
+                    binding.textView34.text = it.birthdate
+                    binding.textView36.text = it.gender
+                    binding.textView38.text = it.email
+                }
+            }
+        }
         viewModel.isLoading.observe(this) { isLoading ->
             binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
         }
-        viewModel.getUserByIdResult.observe(this){
-            binding.textView32.text = it.data?.nama
-            binding.textView34.text = it.data?.email
-            binding.textView36.text = it.data?.idUser.toString()
-        }
+
 
     }
 }

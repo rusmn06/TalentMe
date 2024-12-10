@@ -80,8 +80,11 @@ class LoginActivity : AppCompatActivity() {
                 val loginResult = response.user
                 val token = "token"
                 if (loginResult?.idUser != null && loginResult.email != null) {
-                    val userModel =
-                        loginResult.nama?.let { UserModel(it, loginResult.email, "", "", token, true) }
+                    val userModel = response.user.idUser?.let { id ->
+                        response.user.email?.let { email ->
+                            UserModel(id, email, token, true)
+                        }
+                    }
                     if (userModel != null) {
                         viewModel.saveSession(userModel)
                     }

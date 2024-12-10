@@ -3,10 +3,13 @@ package com.example.talentme.ui.profile
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
+import com.example.talentme.data.pref.UserModel
 import com.example.talentme.data.repository.UserRepository
 import com.example.talentme.data.response.ErrorResponse
 import com.example.talentme.data.response.GetUserByIdResponse
+import com.example.talentme.data.room.User
 import com.google.gson.Gson
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
@@ -15,6 +18,9 @@ class ProfileActivityViewModel(val userRepository: UserRepository) : ViewModel()
     private val _getUserByIdResult = MutableLiveData<GetUserByIdResponse>()
     val getUserByIdResult: LiveData<GetUserByIdResponse> = _getUserByIdResult
 
+    private val _getUserByIdRoom = MutableLiveData<User?>()
+    val getUserByIdRoom: LiveData<User?> = _getUserByIdRoom
+
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 
@@ -22,6 +28,7 @@ class ProfileActivityViewModel(val userRepository: UserRepository) : ViewModel()
     val errorMessage: LiveData<String?> = _errorMessage
 
     private lateinit var response: GetUserByIdResponse
+
 
     fun GetUserById(id : Int) {
         viewModelScope.launch {
@@ -49,5 +56,15 @@ class ProfileActivityViewModel(val userRepository: UserRepository) : ViewModel()
             }
         }
     }
-
+    fun getUserById(userId: Int) {
+        viewModelScope.launch {
+            val user = userRepository.getUserById(userId)
+            if (user != null) {
+                _getUserByIdRoom.postValue(user)
+            }
+        }
+    }
+    fun getSession(): LiveData<UserModel> {
+        return userRepository.getSession().asLiveData()
+    }
 }

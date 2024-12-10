@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName
 data class ModelResponse(
 
 	@field:SerializedName("data")
-	val data: Data? = null,
+	val data: DataModel? = null,
 
 	@field:SerializedName("message")
 	val message: String? = null,

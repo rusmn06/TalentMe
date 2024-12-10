@@ -11,11 +11,16 @@ import com.example.talentme.data.response.RegisterResponse
 import com.example.talentme.data.response.RegisterUserResponse
 import com.example.talentme.data.retrofit.ApiService
 import com.example.talentme.data.retrofit.UserApiService
+import com.example.talentme.data.room.User
+import com.example.talentme.data.room.UserDao
+import kotlinx.coroutines.flow.Flow
 
 
 class UserRepository private constructor(
     private val userPreference: UserPreference,
-    private val apiService: UserApiService
+    private val apiService: UserApiService,
+    private val userDao: UserDao,
+
 ) {
     suspend fun saveSession(user: UserModel) {
         userPreference.saveSession(user)
@@ -31,15 +36,24 @@ class UserRepository private constructor(
     suspend fun getUserbyId(id: Int): GetUserByIdResponse {
         return apiService.getUserById(id)
     }
+    fun getSession(): Flow<UserModel> {
+        return userPreference.getSession()
+    }
+    suspend fun insert(user: User) = userDao.insert(user)
+    suspend fun getAllUsers(): List<User> = userDao.getAllUsers()
+    suspend fun delete(user: User) = userDao.delete(user)
+    suspend fun getUserById(userId: Int): User? = userDao.getUserById(userId)
+
     companion object {
         @Volatile
         private var instance: UserRepository? = null
         fun getInstance(
             userPreference: UserPreference,
-            apiService: UserApiService
+            apiService: UserApiService,
+            userDao: UserDao
         ): UserRepository =
             instance ?: synchronized(this) {
-                instance ?: UserRepository(userPreference, apiService)
+                instance ?: UserRepository(userPreference, apiService, userDao)
             }.also { instance = it }
     }
 }
