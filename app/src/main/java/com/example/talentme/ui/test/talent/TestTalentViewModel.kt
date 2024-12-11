@@ -37,8 +37,6 @@ class TestTalentViewModel(val repository: RecomendationRepository) : ViewModel()
             try {
                 response = repository.predict(predictRequest)
                 Log.d("TestTalentViewModel", "API response: $response")
-
-                // Cek apakah data kosong atau null
                 if (response.error == false && (response.data?.predict?.sector.isNullOrEmpty() || response.data?.predict == null)) {
                     _predictResult.postValue(getDummyResponse())
                     Log.d("TestTalentViewModel", "Using dummy response")
@@ -110,8 +108,6 @@ class TestTalentViewModel(val repository: RecomendationRepository) : ViewModel()
             name = "Health Sector",
             id = 102
         )
-
-        // Data dummy untuk sektor Pendidikan
         val educationUniversities = listOf(
             UniversityItem(
                 name = "Education Academy",
@@ -133,8 +129,6 @@ class TestTalentViewModel(val repository: RecomendationRepository) : ViewModel()
             name = "Education Sector",
             id = 103
         )
-
-        // Data dummy untuk sektor Teknik
         val engineeringUniversities = listOf(
             UniversityItem(
                 name = "Engineering Institute",
@@ -157,21 +151,16 @@ class TestTalentViewModel(val repository: RecomendationRepository) : ViewModel()
             id = 104
         )
 
-        // Gabungkan semua sektor
         val allSectors = listOf(itSector, healthSector, educationSector, engineeringSector)
 
-        // Buat prediksi
         val predict = Predict(
             sector = allSectors
         )
 
-        // Buat model data
         val dataModel = DataModel(
             predict = predict,
-            accuracy = 0.92 // Contoh tingkat akurasi prediksi
+            accuracy = 0.92
         )
-
-        // Return ModelResponse
         return ModelResponse(
             data = dataModel,
             message = "Prediction successful",
