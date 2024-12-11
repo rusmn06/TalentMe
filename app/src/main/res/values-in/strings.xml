@@ -148,6 +148,7 @@
     <string name="tflite_is_not_initialized_yet">Model is not initialize yet</string>
     <string name="no_tflite_interpreter_loaded">no intreperter loaded</string>
     <string name="view_details">Lihat detail</string>
+    <string name="welcomeHome">Selamat Datang, %1$s</string>
 
 
 </resources>

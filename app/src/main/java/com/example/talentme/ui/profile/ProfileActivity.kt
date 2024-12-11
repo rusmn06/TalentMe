@@ -39,6 +39,7 @@ class ProfileActivity : AppCompatActivity() {
             Log.d("ProfileActivity", "User ID: ${user.id}")
             viewModel.getUserById(user.id)
             viewModel.getUserByIdRoom.observe(this){
+                Log.d("ProfileActivity", "data room: $it")
                 if (it != null){
                     binding.textView28.text = it.email
                     binding.textView32.text = it.name

@@ -15,7 +15,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppinsextrabold"
-        android:text="@string/welcome"
+        android:text="@string/welcomeHome"
         android:textColor="#257063"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -23,6 +23,16 @@
         app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ivProfile"

@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.talentme.data.repository.RecomendationRepository
 import com.example.talentme.data.repository.UserRepository
 import com.example.talentme.di.Injection
+import com.example.talentme.ui.home.HomeViewModel
 import com.example.talentme.ui.login.LoginViewModel
 import com.example.talentme.ui.profile.ProfileActivityViewModel
 import com.example.talentme.ui.register.RegisterViewModel
@@ -35,6 +36,9 @@ class ViewModelFactory(private val userRepository: UserRepository, private val r
             }
             modelClass.isAssignableFrom(ProfileActivityViewModel::class.java) -> {
                 ProfileActivityViewModel(userRepository) as T
+            }
+            modelClass.isAssignableFrom(HomeViewModel::class.java) -> {
+                HomeViewModel(userRepository) as T
             }
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }
