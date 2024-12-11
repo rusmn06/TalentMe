@@ -116,35 +116,37 @@
 
     <EditText
         android:id="@+id/edRegisterName"
-        android:layout_width="349dp"
+        android:layout_width="0dp"
         android:layout_height="54dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:alpha="0"
         android:background="@drawable/edit_text_border"
         android:ems="10"
         android:fontFamily="@font/poppinsmedium"
         android:hint="@string/hint_name"
         android:inputType="text"
-        android:alpha="0"
-        tools:alpha="100"
         android:textAlignment="textStart"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:alpha="100" />
 
     <EditText
         android:id="@+id/edRegisterBirthDate"
-        android:layout_width="349dp"
+        android:layout_width="0dp"
         android:layout_height="51dp"
+        android:layout_marginEnd="20dp"
         android:alpha="0"
         android:background="@drawable/edit_text_border"
+        android:drawableEnd="@drawable/baseline_calendar_month_24"
         android:ems="10"
         android:fontFamily="@font/poppinsmedium"
         android:hint="@string/hint_birthdate"
         android:inputType="date"
-        android:drawableEnd="@drawable/baseline_calendar_month_24"
         android:textAlignment="textStart"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
@@ -156,8 +158,9 @@
 
     <EditText
         android:id="@+id/edRegisterEmail"
-        android:layout_width="357dp"
+        android:layout_width="0dp"
         android:layout_height="55dp"
+        android:layout_marginEnd="20dp"
         android:alpha="0"
         android:background="@drawable/edit_text_border"
         android:ems="10"
@@ -175,8 +178,9 @@
 
     <EditText
         android:id="@+id/edRegisterPassword"
-        android:layout_width="358dp"
+        android:layout_width="0dp"
         android:layout_height="49dp"
+        android:layout_marginEnd="20dp"
         android:alpha="0"
         android:background="@drawable/edit_text_border"
         android:ems="10"
@@ -194,8 +198,9 @@
 
     <Spinner
         android:id="@+id/edRegisterGender"
-        android:layout_width="349dp"
+        android:layout_width="0dp"
         android:layout_height="52dp"
+        android:layout_marginEnd="20dp"
         android:alpha="0"
         android:background="@drawable/edit_text_border"
         android:ems="10"
@@ -240,15 +245,14 @@
 
     <Button
         android:id="@+id/signupBtn"
-        android:layout_width="168dp"
-        android:layout_height="56dp"
+        android:layout_width="95dp"
+        android:layout_height="57dp"
+        android:alpha="0"
         android:backgroundTint="#000000"
         android:fontFamily="@font/poppinsextrabold"
         android:text="@string/sign_in"
-        android:alpha="0"
-        tools:alpha="100"
-
         android:textAlignment="viewStart"
+
         android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold|italic"
@@ -258,7 +262,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/signinBtn"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:alpha="100" />
 
     <TextView
         android:id="@+id/textView11"

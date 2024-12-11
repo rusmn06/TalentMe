@@ -88,42 +88,42 @@
 
     <EditText
         android:id="@+id/edRegisterEmail"
-        android:layout_width="349dp"
+        android:layout_width="0dp"
         android:layout_height="58dp"
         android:layout_marginEnd="32dp"
+        android:alpha="0"
         android:background="@drawable/edit_text_border"
         android:ems="10"
         android:fontFamily="@font/poppinsmedium"
         android:hint="@string/email_hint"
         android:inputType="textEmailAddress"
         android:textAlignment="textStart"
-        android:alpha="0"
-        tools:alpha="100"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        tools:alpha="100" />
 
     <EditText
         android:id="@+id/edRegisterPassword"
-        android:layout_width="348dp"
+        android:layout_width="0dp"
         android:layout_height="49dp"
         android:layout_marginEnd="28dp"
+        android:alpha="0"
         android:background="@drawable/edit_text_border"
         android:ems="10"
         android:fontFamily="@font/poppinsmedium"
         android:hint="@string/hint_password"
         android:inputType="textPassword"
         android:textAlignment="textStart"
-        android:alpha="0"
-        tools:alpha="100"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        tools:alpha="100" />
 
     <Button
         android:id="@+id/signinBtn"
@@ -144,16 +144,15 @@
 
     <Button
         android:id="@+id/signupBtn"
-        android:layout_width="148dp"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginEnd="32dp"
+        android:alpha="0"
         android:backgroundTint="#000000"
         android:fontFamily="@font/poppinsextrabold"
         android:text="@string/sign_up"
-        android:alpha="0"
-        tools:alpha="100"
-
         android:textAlignment="textStart"
+
         android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold|italic"
@@ -163,7 +162,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/signinBtn"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:alpha="100" />
 
     <TextView
         android:id="@+id/textView11"
