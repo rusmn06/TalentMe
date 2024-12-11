@@ -33,7 +33,7 @@ class ResultTalentActivity : AppCompatActivity() {
             "Education Sector" -> binding.imageView10.setImageResource(R.drawable.education)
             "Sports Sector" -> binding.imageView10.setImageResource(R.drawable.sports)
             "Finance Sector" -> binding.imageView10.setImageResource(R.drawable.finance)
-            "Entertainment Sector" -> binding.imageView10.setImageResource(R.drawable.finance)
+            "Entertainment Sector" -> binding.imageView10.setImageResource(R.drawable.entertaintmentsector)
 
         }
         binding.button.text = sectorName
