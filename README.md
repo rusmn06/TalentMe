@@ -16,5 +16,7 @@ Proyek ini adalah platform kolaborasi yang terdiri dari tiga komponen utama:
 - talentme-md: Berisi kode pengembangan Mobile Development.
 - talentme-ml: Berisi kode pengembangan Machine Learning.
 
-#Aplikasi Mobile
-https://drive.google.com/file/d/1gxtn9aD2ft9Nv39ruOlsHQxGUAm3sioB/view?usp=sharing
+#Deployment Link
+API Application: https://talentme-api-572806706972.asia-southeast2.run.app
+API Machine Learning: https://talentme-api-model-572806706972.asia-southeast2.run.app
+APK: https://drive.google.com/file/d/1gxtn9aD2ft9Nv39ruOlsHQxGUAm3sioB/view?usp=sharing
